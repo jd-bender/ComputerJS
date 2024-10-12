@@ -4,13 +4,14 @@
   "description": "",
   "main": "Computer.js",
   "scripts": {
-    "start": "node src/Computer.js",
+    "start": "npx tsc src/Computer.ts",
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
   },
   "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "typescript": "^5.6.3"
   }
 }

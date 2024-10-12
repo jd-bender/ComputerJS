@@ -1,0 +1,1 @@
+export const parseBits = (num: string): Array<number> => num.split('').map((digitChar) => Number(digitChar));

@@ -1,6 +1,8 @@
-import XOR from "../gates/XOR.js";
+import XOR from "../gates/XOR";
 
-export default (isSubtracting, bits) => {
+type EightBitArrayType = [number, number, number, number, number, number, number, number];
+
+export default (isSubtracting: number, bits: EightBitArrayType): EightBitArrayType => {
     const XOR_1 = XOR(isSubtracting, bits[0]);
     const XOR_2 = XOR(isSubtracting, bits[1]);
     const XOR_3 = XOR(isSubtracting, bits[2]);

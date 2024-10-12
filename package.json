@@ -1,0 +1,12 @@
+{
+  "name": "computerjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Computer.js",
+  "scripts": {
+    "start": "node src/Computer.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

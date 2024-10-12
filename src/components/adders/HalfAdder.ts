@@ -1,7 +1,10 @@
 import XOR from "../../gates/XOR.js";
 import AND from "../../gates/AND.js";
 
-export default (a: number, b: number): [number, number] => {
+type sum = number;
+type carryOut = number;
+
+export default (a: number, b: number): [sum, carryOut] => {
     const sum_out = XOR(a, b);
     const carry_out = AND(a, b);
 

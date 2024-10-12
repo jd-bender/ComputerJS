@@ -10,5 +10,5 @@ export default (isSubtracting, bits) => {
     const XOR_7 = XOR(isSubtracting, bits[6]);
     const XOR_8 = XOR(isSubtracting, bits[7]);
 
-    return "" + XOR_1 + XOR_2 + XOR_3 + XOR_4 + XOR_5 + XOR_6 + XOR_7 + XOR_8;
+    return [XOR_1, XOR_2, XOR_3, XOR_4, XOR_5, XOR_6, XOR_7, XOR_8];
 };

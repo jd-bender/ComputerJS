@@ -1,6 +1,5 @@
+import { EightBitArrayType } from "../types";
 import XOR from "../gates/XOR";
-
-type EightBitArrayType = [number, number, number, number, number, number, number, number];
 
 export default (isSubtracting: number, bits: EightBitArrayType): EightBitArrayType => {
     const XOR_1 = XOR(isSubtracting, bits[0]);

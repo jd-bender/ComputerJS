@@ -1,0 +1,1 @@
+export type EightBitArrayType = [number, number, number, number, number, number, number, number];

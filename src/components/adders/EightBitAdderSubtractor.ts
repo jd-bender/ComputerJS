@@ -1,11 +1,11 @@
-import { parseBits } from "../../utilities";
+import { parseByte } from "../../utilities";
 import EightBitOnesComplement from "../EightBitOnesComplement";
 import FullAdder from "./FullAdder";
 import XOR from "../../gates/XOR";
 
 export default (num1: string, num2: string, isSubtracting: number): string => {    
-    const num1bits = parseBits(num1);
-    const num2bits = EightBitOnesComplement(isSubtracting, parseBits(num2));
+    const num1bits = parseByte(num1);
+    const num2bits = EightBitOnesComplement(isSubtracting, parseByte(num2));
 
     const FullAdder_0 = FullAdder(num1bits[7], num2bits[7], isSubtracting);
     const FullAdder_0_sum = FullAdder_0[0];

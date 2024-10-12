@@ -1,11 +1,13 @@
 import { parseBits } from "../../utilities.js";
+import EightBitOnesComplement from "../EightBitOnesComplement.js";
 import FullAdder from "./FullAdder.js";
+import XOR from "../../gates/XOR.js";
 
 export default (num1, num2, isSubtracting) => {    
     const num1bits = parseBits(num1);
-    const num2bits = parseBits(num2);
+    const num2bits = EightBitOnesComplement(isSubtracting, parseBits(num2));
 
-    const FullAdder_0 = FullAdder(num1bits[7], num2bits[7], 0);
+    const FullAdder_0 = FullAdder(num1bits[7], num2bits[7], isSubtracting);
     const FullAdder_0_sum = FullAdder_0[0];
     const FullAdder_0_carry_out = FullAdder_0[1];
 
@@ -35,7 +37,8 @@ export default (num1, num2, isSubtracting) => {
 
     const FullAdder_7 = FullAdder(num1bits[0], num2bits[0], FullAdder_6_carry_out);
     const FullAdder_7_sum = FullAdder_7[0];
-    const FullAdder_7_carry_out = FullAdder_7[1];
+    
+    const overflow = XOR(FullAdder_7[1], isSubtracting);
 
-    return `${FullAdder_7_carry_out}${FullAdder_7_sum}${FullAdder_6_sum}${FullAdder_5_sum}${FullAdder_4_sum}${FullAdder_3_sum}${FullAdder_2_sum}${FullAdder_1_sum}${FullAdder_0_sum}`;
+    return `${overflow}${FullAdder_7_sum}${FullAdder_6_sum}${FullAdder_5_sum}${FullAdder_4_sum}${FullAdder_3_sum}${FullAdder_2_sum}${FullAdder_1_sum}${FullAdder_0_sum}`;
 };

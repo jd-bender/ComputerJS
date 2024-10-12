@@ -6,5 +6,8 @@ import EightBitAdderSubtractor from "./components/adders/EightBitAdderSubtractor
 // console.log(EightToThreeEncoder(0, 0, 0, 0, 0, 0, 1, 0));
 
 
+// addition
+console.log(EightBitAdderSubtractor('01100101', '10110110', 0));
 
-console.log(EightBitAdderSubtractor('01100101', '10110110'));
+// subtraction
+console.log(EightBitAdderSubtractor('11111101', '10110000', 1));

@@ -1,4 +1,4 @@
-import EightBitAdderSubtractor from "./components/adders/EightBitAdderSubtractor";
+import EightBitAdderSubtractor from "./components/adders/EightBitAdderSubtractor.js";
 
 // addition
 console.log(EightBitAdderSubtractor('01100101', '10110110', 0));

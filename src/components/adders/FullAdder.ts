@@ -1,5 +1,5 @@
-import HalfAdder from "./HalfAdder";
-import OR from "../../gates/OR";
+import HalfAdder from "./HalfAdder.js";
+import OR from "../../gates/OR.js";
 
 export default (a: number, b: number, carry_in: number): [number, number] => {
     const HalfAdder_1 = HalfAdder(a, b);

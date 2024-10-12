@@ -4,7 +4,7 @@
   "description": "",
   "main": "Computer.js",
   "scripts": {
-    "start": "npx tsc src/Computer.ts",
+    "start": "npx tsx src/Computer.ts",
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
   },
   "author": "",
@@ -12,6 +12,7 @@
   "type": "module",
   "devDependencies": {
     "jest": "^29.7.0",
+    "tsx": "^4.19.1",
     "typescript": "^5.6.3"
   }
 }
